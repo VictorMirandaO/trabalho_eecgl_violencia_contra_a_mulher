@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lei Maria da Penha - Combate à Violência Contra a Mulher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para esta página */
+        .page-content {
+            padding: 8rem 0 4rem;
+            background-color: var(--white);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb i {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            color: #777;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .article-image {
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--dark-color);
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--dark-color);
+        }
+        
+        .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            list-style-type: disc;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background-color: var(--light-color);
+            font-style: italic;
+        }
+        
+        .share-buttons {
+            margin: 3rem 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .share-buttons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .share-buttons .facebook {
+            background-color: #3b5998;
+        }
+        
+        .share-buttons .twitter {
+            background-color: #1da1f2;
+        }
+        
+        .share-buttons .whatsapp {
+            background-color: #25d366;
+        }
+        
+        .share-buttons a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .related-articles {
+            margin-top: 4rem;
+        }
+        
+        .related-articles h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .related-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .related-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .related-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .related-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .related-card-content {
+            padding: 1.5rem;
+        }
+        
+        .related-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .related-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .article h1 {
+                font-size: 2rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Não<span>Cale</span>Se</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#tipos">Tipos de Violência</a></li>
+                    <li><a href="index.html#ajuda">Buscar Ajuda</a></li>
+                    <li><a href="index.html#relatos">Relatos</a></li>
+                    <li><a href="index.html#estatisticas">Estatísticas</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="article">
+                <div class="breadcrumb">
+                    <a href="index.html">Início</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Lei Maria da Penha</span>
+                </div>
+                
+                <h1>Lei Maria da Penha: Conhecendo seus direitos</h1>
+                
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> Atualizado em 10/03/2023</span>
+                    <span><i class="far fa-clock"></i> 8 minutos de leitura</span>
+                </div>
+                
+                <div class="article-image">
+                    <img src="https://placehold.co/800x400/FF69B4/FFF?text=Lei+Maria+da+Penha" alt="Imagem representativa da Lei Maria da Penha">
+                </div>
+                
+                <div class="article-content">
+                    <p>A Lei Maria da Penha (Lei nº 11.340/2006) é uma das mais importantes conquistas na luta contra a violência doméstica e familiar contra a mulher no Brasil. Criada para proteger mulheres de agressões no ambiente doméstico e familiar, a lei recebeu o nome de Maria da Penha Maia Fernandes, uma farmacêutica brasileira que foi vítima de violência doméstica por mais de 20 anos.</p>
+                    
+                    <blockquote>
+                        "Eu digo sempre que sobrevivi para que outras mulheres não morram." - Maria da Penha Maia Fernandes
+                    </blockquote>
+                    
+                    <h2>Histórico da Lei</h2>
+                    <p>Maria da Penha sofreu duas tentativas de assassinato por parte de seu então marido. Na primeira vez, em 1983, ele disparou um tiro contra ela enquanto dormia, deixando-a paraplégica. Meses depois, tentou eletrocutá-la durante o banho. A luta de Maria por justiça durou quase 20 anos, até que em 2002, após pressão de organismos internacionais, o agressor foi finalmente preso.</p>
+                    
+                    <p>O caso chegou à Comissão Interamericana de Direitos Humanos da Organização dos Estados Americanos (OEA), que pela primeira vez acatou uma denúncia de violência doméstica. O Brasil foi condenado por negligência e omissão em relação à violência doméstica, e recebeu a recomendação para criar uma legislação adequada a esse tipo de violência.</p>
+                    
+                    <h2>O que a Lei Maria da Penha estabelece?</h2>
+                    <p>A Lei Maria da Penha criou mecanismos para coibir e prevenir a violência doméstica e familiar contra a mulher. Alguns dos pontos principais da lei incluem:</p>
+                    
+                    <h3>Formas de violência reconhecidas pela lei:</h3>
+                    <ul>
+                        <li><strong>Violência física:</strong> qualquer conduta que ofenda a integridade ou saúde corporal da mulher;</li>
+                        <li><strong>Violência psicológica:</strong> condutas que causem dano emocional, diminuição da autoestima, que controle comportamentos e decisões;</li>
+                        <li><strong>Violência sexual:</strong> qualquer conduta que constranja a mulher a presenciar, manter ou participar de relação sexual não desejada;</li>
+                        <li><strong>Violência patrimonial:</strong> qualquer conduta que configure retenção, subtração ou destruição de objetos, documentos pessoais, bens e valores;</li>
+                        <li><strong>Violência moral:</strong> qualquer conduta que configure calúnia, difamação ou injúria.</li>
+                    </ul>
+                    
+                    <h3>Medidas protetivas de urgência</h3>
+                    <p>A Lei Maria da Penha prevê medidas protetivas que podem ser solicitadas pela vítima ou pelo Ministério Público. Essas medidas incluem:</p>
+                    
+                    <ul>
+                        <li>Afastamento do agressor do lar;</li>
+                        <li>Proibição de aproximação da vítima e de seus familiares;</li>
+                        <li>Proibição de contato com a vítima por qualquer meio de comunicação;</li>
+                        <li>Proibição do agressor frequentar determinados lugares;</li>
+                        <li>Restrição ou suspensão de visitas aos filhos;</li>
+                        <li>Prestação de alimentos provisórios.</li>
+                    </ul>
+                    
+                    <h3>Atendimento policial especializado</h3>
+                    <p>A lei também estabeleceu a criação de Delegacias Especializadas de Atendimento à Mulher, atuando na prevenção e repressão aos atos de violência contra a mulher. Hoje, existem centenas dessas delegacias espalhadas por todo o país.</p>
+                    
+                    <h2>Como denunciar</h2>
+                    <p>Se você está sofrendo ou conhece alguém que esteja em situação de violência doméstica, saiba que existem canais para buscar ajuda:</p>
+                    
+                    <ul>
+                        <li><strong>Ligue 180</strong> - Central de Atendimento à Mulher: funciona 24 horas por dia, todos os dias, e pode ser acionado de qualquer lugar do Brasil;</li>
+                        <li><strong>Ligue 190</strong> - Polícia Militar: em casos de emergência;</li>
+                        <li><strong>Delegacias da Mulher</strong>: unidades especializadas no atendimento às mulheres vítimas de violência;</li>
+                        <li><strong>Ministério Público</strong>: pode ser acionado diretamente para denúncias de violência contra a mulher;</li>
+                        <li><strong>Aplicativo Direitos Humanos Brasil</strong>: permite fazer denúncias pelo celular.</li>
+                    </ul>
+                    
+                    <h2>Importância da prevenção e educação</h2>
+                    <p>A Lei Maria da Penha também estabelece a importância da prevenção e educação para combater a violência contra a mulher. Isso inclui campanhas educativas, capacitação permanente de profissionais que atendem mulheres em situação de violência, e inclusão de conteúdos sobre direitos humanos e equidade de gênero nos currículos escolares.</p>
+                    
+                    <p>A educação e a consciência social são ferramentas fundamentais para mudar padrões culturais que naturalizam a violência contra a mulher. Quanto mais informação, mais empoderamento e mais chances de romper o ciclo da violência.</p>
+                </div>
+                
+                <div class="share-buttons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                
+                <div class="related-articles">
+                    <h3>Artigos Relacionados</h3>
+                    <div class="related-cards">
+                        <div class="related-card">
+                            <img src="https://placehold.co/400x200/FF69B4/FFF?text=Medidas+Protetivas" alt="Medidas Protetivas">
+                            <div class="related-card-content">
+                                <h4>Como solicitar medidas protetivas de urgência</h4>
+                                <p>Saiba quais são os procedimentos para solicitar medidas protetivas e garantir sua segurança.</p>
+                                <a href="#" class="btn-secondary">Ler mais</a>
+                            </div>
+                        </div>
+                        <div class="related-card">
+                            <img src="https://placehold.co/400x200/FF69B4/FFF?text=Sinais+de+Abuso" alt="Sinais de relacionamento abusivo">
+                            <div class="related-card-content">
+                                <h4>Sinais de um relacionamento abusivo</h4>
+                                <p>Aprenda a identificar os primeiros sinais de um relacionamento abusivo e como buscar ajuda.</p>
+                                <a href="#" class="btn-secondary">Ler mais</a>
+                            </div>
+                        </div>
+                        <div class="related-card">
+                            <img src="https://placehold.co/400x200/FF69B4/FFF?text=Rede+de+Apoio" alt="Rede de apoio">
+                            <div class="related-card-content">
+                                <h4>A importância da rede de apoio</h4>
+                                <p>Como amigos, familiares e profissionais podem ajudar mulheres em situação de violência.</p>
+                                <a href="#" class="btn-secondary">Ler mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Não<span>Cale</span>Se</h2>
+                    <p>Projeto educacional sobre combate à violência contra a mulher.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres" target="_blank">Políticas para Mulheres</a></li>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres/arquivo/assuntos/violencia/lei-maria-da-penha-1" target="_blank">Lei Maria da Penha</a></li>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres/arquivo/assuntos/violencia/programa-mulher-viver-sem-violencia" target="_blank">Programa Mulher Viver Sem Violência</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Canais de Denúncia</h3>
+                    <p><i class="fas fa-phone"></i> Ligue 180</p>
+                    <p><i class="fas fa-phone"></i> Ligue 190</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Projeto Escolar - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

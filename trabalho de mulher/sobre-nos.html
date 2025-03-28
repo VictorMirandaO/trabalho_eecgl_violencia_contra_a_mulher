@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Combate à Violência Contra a Mulher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para esta página */
+        .page-content {
+            padding: 8rem 0 4rem;
+            background-color: var(--white);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb i {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .about-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .about-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .school-info {
+            background-color: rgba(255, 51, 102, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .school-info h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .school-info p {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .team-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            color: var(--dark-color);
+        }
+        
+        .team-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+        
+        .member-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 2rem auto 1rem;
+            overflow: hidden;
+            border: 5px solid var(--light-color);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+        }
+        
+        .member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .member-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .contribution {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .contribution h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .contribution p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .message {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .text-center {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about-header h1 {
+                font-size: 2rem;
+            }
+            
+            .team-title {
+                font-size: 1.5rem;
+            }
+            
+            .member-photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Não<span>Cale</span>Se</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#tipos">Tipos de Violência</a></li>
+                    <li><a href="index.html#ajuda">Buscar Ajuda</a></li>
+                    <li><a href="index.html#relatos">Relatos</a></li>
+                    <li><a href="index.html#estatisticas">Estatísticas</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Sobre Nós</span>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>Nossa Equipe</h1>
+                    <p>Conheça os alunos responsáveis pelo desenvolvimento deste projeto educacional sobre o combate à violência contra a mulher.</p>
+                </div>
+                
+                <div class="school-info">
+                    <h2>3º Ano do Ensino Médio - Turma 3º Reg 1</h2>
+                    <p>Este projeto foi desenvolvido como trabalho escolar pelos alunos do 3º ano do Ensino Médio, com o objetivo de conscientizar sobre a violência contra a mulher e compartilhar informações importantes sobre prevenção e denúncia.</p>
+                </div>
+                
+                <h2 class="team-title">Desenvolvedores</h2>
+                
+                <div class="team-members">
+                    <div class="member-card">
+                        <div class="member-photo">
+                            <img src="./img/EricIMG.jpg" alt="Foto de Eric Leonardo">
+                        </div>
+                        <div class="member-info">
+                            <h3>Eric Leonardo</h3>
+                            <p>Aluno do 3º Reg 1</p>
+                            <p>Responsável pela estruturação do site e desenvolvimento das funcionalidades interativas.</p>
+                            <div class="social-links">
+                                <a href="https://instagram.com/ericxqz7" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://github.com/imvooid" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/ericleonardoo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-photo">
+                            <img src="./img/LucasIMG.jpeg" alt="Foto de Lucas Daniel">
+                        </div>
+                        <div class="member-info">
+                            <h3>Lucas Daniel</h3>
+                            <p>Aluno do 3º Reg 1</p>
+                            <p>Responsável pelo desenvolvimento de conteúdo e pesquisa sobre a Lei Maria da Penha.</p>
+                            <div class="social-links">
+                                <a href="https://instagram.com/lluucas_ld" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-photo">
+                            <img src="./img/VictorIMG.jpeg" alt="Foto de Victor Miranda">
+                        </div>
+                        <div class="member-info">
+                            <h3>Victor Miranda</h3>
+                            <p>Aluno do 3º Reg 1</p>
+                            <p>Responsável pelo design visual e pela responsividade do site em diferentes dispositivos.</p>
+                            <div class="social-links">
+                                <a href="https://instagram.com/1victor.js" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://github.com/VictorMirandaO" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/victor-miranda-oliveira-181208309" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contribution">
+                    <h3>Nossa Contribuição</h3>
+                    <p>Desenvolvemos este projeto com o objetivo de proporcionar informações acessíveis e esclarecedoras sobre a violência contra a mulher. Acreditamos que a educação e a conscientização são ferramentas fundamentais para combater esse problema social.</p>
+                    <p>Através deste site, esperamos ajudar mulheres que estejam em situação de vulnerabilidade a conhecerem seus direitos e saberem onde buscar ajuda, além de conscientizar a sociedade como um todo sobre a importância do combate à violência de gênero.</p>
+                </div>
+                
+                <div class="message">
+                    "Nenhuma forma de violência se justifica. Toda mulher tem direito a uma vida livre de violência. Não se cale!"
+                </div>
+                
+                <div class="text-center">
+                    <a href="index.html" class="btn-primary">Voltar para a Página Inicial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Não<span>Cale</span>Se</h2>
+                    <p>Projeto educacional sobre combate à violência contra a mulher.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres" target="_blank">Políticas para Mulheres</a></li>
+                        <li><a href="lei-maria-da-penha.html">Lei Maria da Penha</a></li>
+                        <li><a href="denuncia.html">Fazer Denúncia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Canais de Denúncia</h3>
+                    <p><i class="fas fa-phone"></i> Ligue 180</p>
+                    <p><i class="fas fa-phone"></i> Ligue 190</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Projeto Escolar - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

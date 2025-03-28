@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça sua Denúncia - Combate à Violência Contra a Mulher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para esta página */
+        .page-content {
+            padding: 8rem 0 4rem;
+            background-color: var(--white);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            margin-bottom: 2rem;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb i {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            text-align: center;
+        }
+        
+        .form-container p {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #666;
+        }
+        
+        .form-description {
+            background-color: rgba(255, 51, 102, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .form-description p {
+            margin-bottom: 0.5rem;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        
+        .form-description p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--dark-color);
+            transition: var(--transition);
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 51, 102, 0.2);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        
+        .form-actions .btn-primary {
+            min-width: 150px;
+        }
+        
+        .anonymity-note {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+        
+        .emergency-call {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .emergency-call i {
+            margin-right: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-actions .btn-primary {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Não<span>Cale</span>Se</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#tipos">Tipos de Violência</a></li>
+                    <li><a href="index.html#ajuda">Buscar Ajuda</a></li>
+                    <li><a href="index.html#relatos">Relatos</a></li>
+                    <li><a href="index.html#estatisticas">Estatísticas</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Faça sua Denúncia</span>
+            </div>
+            
+            <div class="form-container">
+                <h1>Faça sua Denúncia</h1>
+                <p>Preencha o formulário abaixo para denunciar casos de violência contra a mulher.</p>
+                
+                <div class="emergency-call">
+                    <i class="fas fa-exclamation-triangle"></i> Em casos de emergência, ligue imediatamente para 190 (Polícia Militar) ou 180 (Central de Atendimento à Mulher)
+                </div>
+                
+                <div class="form-description">
+                    <p><strong>IMPORTANTE:</strong> Este formulário é apenas para fins educacionais e demonstrativos como parte de um trabalho escolar. Em situações reais, busque os canais oficiais de denúncia.</p>
+                    <p>Para denúncias reais, utilize o Ligue 180, Ligue 190 ou procure uma Delegacia da Mulher mais próxima.</p>
+                </div>
+                
+                <form id="denuncia-form">
+                    <div class="form-group">
+                        <label for="tipo-denuncia">Tipo de Denúncia</label>
+                        <select id="tipo-denuncia" required>
+                            <option value="">Selecione o tipo de violência</option>
+                            <option value="fisica">Violência Física</option>
+                            <option value="psicologica">Violência Psicológica</option>
+                            <option value="sexual">Violência Sexual</option>
+                            <option value="patrimonial">Violência Patrimonial</option>
+                            <option value="moral">Violência Moral</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome-vitima">Nome da Vítima (opcional)</label>
+                            <input type="text" id="nome-vitima" placeholder="Nome completo da vítima">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="idade-vitima">Idade da Vítima</label>
+                            <select id="idade-vitima">
+                                <option value="">Selecione a faixa etária</option>
+                                <option value="menor18">Menor de 18 anos</option>
+                                <option value="18-25">18 a 25 anos</option>
+                                <option value="26-35">26 a 35 anos</option>
+                                <option value="36-45">36 a 45 anos</option>
+                                <option value="46-60">46 a 60 anos</option>
+                                <option value="maior60">Maior de 60 anos</option>
+                                <option value="nao-informado">Prefiro não informar</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" placeholder="Cidade onde ocorreu a violência" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <select id="estado" required>
+                                <option value="">Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Descrição da Ocorrência</label>
+                        <textarea id="descricao" placeholder="Descreva com detalhes o que aconteceu, quando e onde ocorreu" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="relacao">Relação com o Agressor</label>
+                        <select id="relacao">
+                            <option value="">Selecione a relação</option>
+                            <option value="conjuge">Cônjuge/Companheiro(a)</option>
+                            <option value="ex-conjuge">Ex-cônjuge/Ex-companheiro(a)</option>
+                            <option value="familiar">Familiar</option>
+                            <option value="conhecido">Conhecido</option>
+                            <option value="desconhecido">Desconhecido</option>
+                            <option value="nao-informado">Prefiro não informar</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contato">Seu Contato (opcional)</label>
+                        <input type="text" id="contato" placeholder="E-mail ou telefone para contato se necessário">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="anonima">
+                        <label for="anonima">Desejo fazer uma denúncia anônima</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="testemunha">
+                        <label for="testemunha">Estou disposto(a) a testemunhar se necessário</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="reset" class="btn-secondary">Limpar</button>
+                        <button type="submit" class="btn-primary">Enviar Denúncia</button>
+                    </div>
+                </form>
+                
+                <p class="anonymity-note">Sua segurança é importante para nós. Se você teme represálias, considere fazer uma denúncia anônima ou utilize os canais oficiais de denúncia.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Não<span>Cale</span>Se</h2>
+                    <p>Projeto educacional sobre combate à violência contra a mulher.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres" target="_blank">Políticas para Mulheres</a></li>
+                        <li><a href="lei-maria-da-penha.html">Lei Maria da Penha</a></li>
+                        <li><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/politicas-para-mulheres/arquivo/assuntos/violencia/programa-mulher-viver-sem-violencia" target="_blank">Programa Mulher Viver Sem Violência</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Canais de Denúncia</h3>
+                    <p><i class="fas fa-phone"></i> Ligue 180</p>
+                    <p><i class="fas fa-phone"></i> Ligue 190</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Projeto Escolar - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Script específico para esta página
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('denuncia-form');
+            const checkboxAnonima = document.getElementById('anonima');
+            const nomeInput = document.getElementById('nome-vitima');
+            const contatoInput = document.getElementById('contato');
+            
+            // Toggle campos quando opção anônima for selecionada
+            checkboxAnonima.addEventListener('change', function() {
+                if (this.checked) {
+                    nomeInput.value = '';
+                    nomeInput.disabled = true;
+                    contatoInput.value = '';
+                    contatoInput.disabled = true;
+                } else {
+                    nomeInput.disabled = false;
+                    contatoInput.disabled = false;
+                }
+            });
+            
+            // Processar envio do formulário
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Em um cenário real, aqui enviaria os dados para um servidor
+                // Como é um projeto educacional, apenas mostramos uma mensagem
+                
+                alert('Formulário enviado com sucesso! Lembre-se: em situações reais, utilize os canais oficiais de denúncia como o Ligue 180 ou Ligue 190.');
+                
+                // Limpar formulário
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html> 
